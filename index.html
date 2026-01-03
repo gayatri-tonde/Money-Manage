@@ -4,13 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>nav</div>
-    <div>
-      <div>menu</div>
-      <div>content</div>
-      <div>sidebar</div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="Money Manage" width="200px" height="auto" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">history</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Charts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="user">
+          <i class="bi bi-person-circle"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="dashboard row">
+      <div class="sidebar col-sm-4 text-center">
+        <div class="card border-success mb-3">
+          <div class="card-body">
+            <h5 class="card-title">MONTHLY INCOME</h5>
+            <p class="text-success fs-1 card-text">00.00</p>
+            <button title="Edit income" class="btn">
+              <i class="bi bi-pencil"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card border-danger mb-3">
+          <div class="card-body">
+            <h5 class="card-title">TOTAL EXPENSE</h5>
+            <p class="text-danger fs-1 card-text">00.00</p>
+            <button title="Edit expense" class="btn">
+              <i class="bi bi-pencil"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card border-warning mb-3">
+          <div class="card-body">
+            <h5 class="card-title">BALANCE</h5>
+            <p class="text-primary fs-1 card-text">00.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="main col-sm-8">heloo</div>
     </div>
+
+    <span class="d-block p-2 text-bg-primary"></span>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

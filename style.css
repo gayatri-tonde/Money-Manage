@@ -1,0 +1,28 @@
+.logo{
+    padding:10px;
+}
+
+nav{
+    padding-right: 50px;
+}
+
+.sidebar{
+   background-color: rgb(204, 222, 250);
+   width: auto;
+   padding:10px;
+   margin-left: 10px;
+   height: 90vh;
+}
+
+.fw-light{
+    font-size: 10px;
+}
+
+.card-title{
+    max-width: 18rem;
+    color: rgb(155, 154, 154);
+}
+
+.user i{
+    font-size: 35px;
+}
