@@ -71,7 +71,7 @@
           </div>
         </div>
       </div>
-      <div class="main col-12 col-lg-10">
+      <div class="main col-12 col-lg-7">
         <div class="transactions">
           <div>
             <h5 class="fs-4">Transactions</h5>
@@ -88,7 +88,6 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Description</th>
-                <th scope="col">Category</th>
                 <th scope="col">Date</th>
                 <th scope="col">Type</th>
                 <th scope="col">Amount</th>
@@ -115,19 +114,13 @@
                     required
                   />
                   <input
-                    id="category"
-                    class="form-control mb-2"
-                    placeholder="Category"
-                    required
-                  />
-                  <input
                     id="date"
                     type="date"
                     class="form-control mb-2"
                     required
                   />
                   <select id="type" class="form-control mb-2" required>
-                    <option value="">Select Type</option>
+                    <option value="">Select</option>
                     <option value="income">Income</option>
                     <option value="expense">Expense</option>
                   </select>
@@ -148,9 +141,36 @@
           </div>
         </div>
       </div>
+      <div class="sidebar col-12 col-lg-3">
+        <div class="lower">
+          <div class="card summary border-info mb-3">
+            <h4 class="card-header text-center bg-transparent border-info">
+              Summary
+            </h4>
+            <div class="card-body">
+              <p class="card-text text-info sum-text"></p>
+            </div>
+          </div>
+
+          <div class="notes card border-info mb-3">
+            <h5 class="card-title bg-transparent text-center">
+              Payable Reminder
+            </h5>
+            <h5>
+              <input placeholder="Add reminder" class="RemInp" required />
+              <button class="btn-info btn btn-sm RemBtn" type="click">
+                ADD
+              </button>
+            </h5>
+            <ul class="RemUl card-text list-group-flush"></ul>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <span class="d-block p-2 text-bg-primary"></span>
+    <span class="d-block p-1 text-bg-primary"></span>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
   </body>

@@ -2,6 +2,7 @@ body {
     background-color: #F8FBFF;
     color: #2C3E50;
     font-family: "Segoe UI", Tahoma, sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -25,21 +26,27 @@ body {
 
 .sidebar {
     background-color: #EEF5FF;
-    border-right: 1px solid #D6E4F0;
+    border: 1px solid #D6E4F0;
     padding: 15px;
     max-height: 90vh;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+
 }
 
 .main {
     padding: 1rem;
-    min-height: 80vh;
-    background-color:#F7F9FC;
+    background-color:white;
 }
 
 .transactions{
     background-color: #429cc3;
     padding: 2rem;
     color: #FFFFFF;
+    height: 80vh;
+    margin: 1rem;
+    border-radius: 2rem;
 }
 
 .transactions div{
@@ -55,6 +62,7 @@ body {
     --bs-table-bg:#429cc3 ;
     --bs-table-color: white;
     color:black;
+    
 }
 
 .table th:first-child,
@@ -71,3 +79,16 @@ body {
     justify-content: space-between;
     
 }
+
+.notes, .summary{
+    padding:1rem;
+    height: max-content;
+    min-width:30vh;
+    margin-right: 2rem;
+
+}
+
+.notes{
+    height: 50vh;
+}
+
