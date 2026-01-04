@@ -37,7 +37,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">history</a>
+              <a class="nav-link" href="#">History</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Charts</a>
@@ -51,36 +51,107 @@
     </nav>
 
     <div class="dashboard row">
-      <div class="sidebar col-sm-4 text-center">
+      <div class="sidebar col-12 col-lg-2 text-center">
         <div class="card border-success mb-3">
+          <h5 class="card-title">MONTHLY INCOME</h5>
           <div class="card-body">
-            <h5 class="card-title">MONTHLY INCOME</h5>
-            <p class="text-success fs-1 card-text">00.00</p>
-            <button title="Edit income" class="btn">
-              <i class="bi bi-pencil"></i>
-            </button>
+            <p class="text-success fs-1 card-text inc-amt">0</p>
           </div>
         </div>
         <div class="card border-danger mb-3">
+          <h5 class="card-title">TOTAL EXPENSE</h5>
           <div class="card-body">
-            <h5 class="card-title">TOTAL EXPENSE</h5>
-            <p class="text-danger fs-1 card-text">00.00</p>
-            <button title="Edit expense" class="btn">
-              <i class="bi bi-pencil"></i>
-            </button>
+            <p class="text-danger fs-1 card-text exp-amt">0</p>
           </div>
         </div>
         <div class="card border-warning mb-3">
+          <h5 class="card-title">BALANCE</h5>
           <div class="card-body">
-            <h5 class="card-title">BALANCE</h5>
-            <p class="text-primary fs-1 card-text">00.00</p>
+            <p class="text-primary fs-1 card-text bal-amt">0</p>
           </div>
         </div>
       </div>
-      <div class="main col-sm-8">heloo</div>
+      <div class="main col-12 col-lg-10">
+        <div class="transactions">
+          <div>
+            <h5 class="fs-4">Transactions</h5>
+            <button
+              class="btn"
+              data-bs-toggle="modal"
+              data-bs-target="#addModal"
+            >
+              <i class="bi bi-plus-lg"></i>
+            </button>
+          </div>
+          <table class="table table-hover table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Description</th>
+                <th scope="col">Category</th>
+                <th scope="col">Date</th>
+                <th scope="col">Type</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider" id="tableBody"></tbody>
+          </table>
+        </div>
+
+        <!--  Transaction Modal -->
+        <div class="modal fade" id="addModal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Add Transaction</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <form id="transactionForm">
+                  <input
+                    id="desc"
+                    class="form-control mb-2"
+                    placeholder="Description"
+                    required
+                  />
+                  <input
+                    id="category"
+                    class="form-control mb-2"
+                    placeholder="Category"
+                    required
+                  />
+                  <input
+                    id="date"
+                    type="date"
+                    class="form-control mb-2"
+                    required
+                  />
+                  <select id="type" class="form-control mb-2" required>
+                    <option value="">Select Type</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                  </select>
+                  <input
+                    id="amount"
+                    type="number"
+                    class="form-control mb-2"
+                    placeholder="Amount"
+                    required
+                    min="1"
+                  />
+                  <button type="submit" class="btn btn-primary w-100 add">
+                    Add
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <span class="d-block p-2 text-bg-primary"></span>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
