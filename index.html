@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -51,6 +52,7 @@
     </nav>
 
     <div class="dashboard row">
+      <!-- Sidebar -->
       <div class="sidebar col-12 col-lg-2 text-center">
         <div class="card border-success mb-3">
           <h5 class="card-title">MONTHLY INCOME</h5>
@@ -72,6 +74,7 @@
         </div>
       </div>
       <div class="main col-12 col-lg-7">
+        <!-- Transactions table -->
         <div class="transactions">
           <div>
             <h5 class="fs-4">Transactions</h5>
@@ -143,24 +146,43 @@
       </div>
       <div class="sidebar col-12 col-lg-3">
         <div class="lower">
-          <div class="card summary border-info mb-3">
+          <!-- Summary -->
+          <div class="card summary border-primary mb-3">
             <h4 class="card-header text-center bg-transparent border-info">
               Summary
             </h4>
             <div class="card-body">
-              <p class="card-text text-info sum-text"></p>
+              <p class="card-text text-primary sum-text"></p>
             </div>
           </div>
-
-          <div class="notes card border-info mb-3">
+          <!-- Reminder -->
+          <div class="notes card border-primary mb-3">
             <h5 class="card-title bg-transparent text-center">
               Payable Reminder
             </h5>
             <h5>
-              <input placeholder="Add reminder" class="RemInp" required />
-              <button class="btn-info btn btn-sm RemBtn" type="click">
-                ADD
-              </button>
+              <form class="row row-cols-lg-auto g-3 align-items-center">
+                <div class="col-12">
+                  <label
+                    class="visually-hidden"
+                    for="inlineFormInputGroupUsername"
+                  >
+                    REMINDER
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control RemInp"
+                    id="inlineFormInputGroupUsername"
+                    placeholder="REMINDER"
+                  />
+                </div>
+
+                <div class="col-12">
+                  <button type="button" class="btn RemBtn btn-primary">
+                    ADD
+                  </button>
+                </div>
+              </form>
             </h5>
             <ul class="RemUl card-text list-group-flush"></ul>
           </div>
@@ -168,9 +190,7 @@
       </div>
     </div>
 
-    <span class="d-block p-1 text-bg-primary"></span>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
   </body>
